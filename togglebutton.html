@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .window {
+            /* background-color: black; */
+
+            width: 100%;
+            height: 50vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            /* background-color: cyan; */
+
+            width: 60px;
+            height: 30px;
+
+            display: inline-block;
+
+            margin-bottom: 20px;
+        }
+
+        .switch:hover {
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
+        }
+        
+        .switch {
+            background-color: #dcd4d4;
+            background-color: #333;
+
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+
+            position: relative;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .switch::after {
+            background-color: white;
+            /* background-color: red; */
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 3px;
+
+            width: 24px;
+            height: 24px;
+            border-radius: 30px;
+        }
+
+        input:checked + .switch::after {
+            /* background-color: blue;
+            background-color: green; */
+            left: 33px;
+        }
+
+        .horizontal_orientation {
+            width: 150px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="window">
+
+        <div class="box">
+            <label>
+                <input type="checkbox" checked>
+                <div class="switch"></div>
+            </label>
+        </div>
+
+        <div class="box">
+            <label>
+                <input type="checkbox" unchecked>
+                <div class="switch"></div>
+            </label>
+        </div>
+        
+        <div class="box">
+            <label>
+                <input type="checkbox" unchecked>
+                <div class="switch"></div>
+            </label>
+        </div>
+        
+        <div class="box">
+            <label>
+                <input type="checkbox" checked>
+                <div class="switch"></div>
+            </label>
+        </div>
+
+        <div class="box">
+            <label>
+                <input type="checkbox" checked>
+                <div class="switch"></div>
+            </label>
+        </div>
+
+    </div>
+</body>
+</html>
