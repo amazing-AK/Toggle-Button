@@ -57,6 +57,7 @@
             bottom: 0;
             left: 0;
             right: 0;
+            transition: 0.4s;
         }
 
         .switch::after {
@@ -70,18 +71,18 @@
             width: 24px;
             height: 24px;
             border-radius: 30px;
+            
+            transition: 0.4s;
+        }
+        
+        input:checked + .switch  {
+            background-color: #3fe23f;
         }
 
         input:checked + .switch::after {
             /* background-color: blue;
             background-color: green; */
             left: 33px;
-        }
-
-        .horizontal_orientation {
-            width: 150px;
-            display: flex;
-            justify-content: space-between;
         }
 
     </style>
